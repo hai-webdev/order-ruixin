@@ -1,0 +1,90 @@
+.main-content {
+  padding: 50px 0;
+  .cate-list {
+    margin-bottom: 20px;
+    .cate-item {
+      font-size: 32px;
+      &::after {
+        height: 7px;
+      }
+      &:hover,
+      &.on {
+        font-size: 40px;
+        &::after {
+          width: 98px;
+        }
+      }
+    }
+  }
+  .news-list {
+    margin-bottom: 50px;
+    .news-item {
+      padding: 40px 0;
+      .text {
+        padding-left: 30px;
+        .title {
+          font-size: 26px;
+          margin-bottom: 15px;
+        }
+        .desc {
+          font-size: 22px;
+          margin-bottom: 10px;
+          .clamp(3);
+        }
+        .more {
+          font-size: 17px;
+          margin-bottom: 10px;
+        }
+        .date {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  .pagination {
+    .flex();
+    .page-num {
+      .flex();
+      width: 40px;
+      height: 40px;
+      border-radius: 4px;
+      border: 1px solid @mainColor;
+      margin: 0 3px 6px;
+      font-size: 18px;
+      color: @mainColor;
+      box-sizing: border-box;
+      user-select: none;
+      &:hover,
+      &.page-num-current {
+        background-color: @mainColor;
+        color: #fff;
+      }
+    }
+    .ellipsis {
+      width: 40px;
+      height: 40px;
+      user-select: none;
+      .flex();
+    }
+    .prev,
+    .next {
+      .flex();
+      user-select: none;
+      font-size: 18px;
+      border-radius: 4px;
+      height: 40px;
+      box-sizing: border-box;
+      padding: 0 20px;
+      color: @mainColor;
+      border: 1px solid @mainColor;
+      margin: 0 3px 6px;
+      background-color: fade(@mainColor, 10%);
+      &.disabled {
+        cursor: no-drop;
+        background-color: #eee;
+        color: #999;
+        border: 1px solid #999;
+      }
+    }
+  }
+}

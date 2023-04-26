@@ -1,0 +1,66 @@
+@import "//at.alicdn.com/t/c/font_3769106_m9iq92wb32c.css";
+@mainColor: #d20009;
+.max-center {
+  width: 90%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.flex(@justify-content:center,@align-items:center) {
+  display: flex;
+  justify-content: @justify-content;
+  align-items: @align-items;
+}
+.object-fit(@object-fit:cover) {
+  object-fit: @object-fit;
+  object-position: center;
+}
+.pw100() {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.clamp(@clamp) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: @clamp;
+  -webkit-box-orient: vertical;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  margin: 0 7.5px;
+  background-color: #fff;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active {
+  background-color: @mainColor;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 47px;
+  height: 47px;
+  &::after {
+    display: none;
+  }
+}
+.swiper-button-prev {
+  left: 37px;
+  background-image: url(/public/common/icon/prev.png);
+  background-position: center;
+  background-size: contain;
+}
+.swiper-button-next {
+  right: 37px;
+  background-image: url(/public/common/icon/next.png);
+  background-position: center;
+  background-size: contain;
+}
+
+img{
+  display: block;
+}

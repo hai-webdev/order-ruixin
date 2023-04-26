@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 引入公共页头 -->
+  <%= require("html-loader!../common/header/index.html") %>
+  <!-- 引入banner -->
+  <%= require("html-loader!../common/banner/index.html") %>
+  <main class="news-container max-center">
+    <div class="title-module">
+      <div class="cn-title">公司动态</div>
+      <div class="en-title">COMPANY NEWS</div>
+    </div>
+     <div class="main-cont">
+      <img src="/public/news/content.jpg" class="banner-img">
+      <div class="title">新闻标题 | 标题标题标题标题标题标题标题标题标题标题标题标题</div>
+      <div class="date">2022-09-20</div>
+      <div class="content">
+        前置内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容前置内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容容内容内容内容内容内容内容内容内容···前置内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容容内容内容内容内容内容内容内容内容···前置内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容容内容内容内容内容内容内容内容内容···前置内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容容内容内容内容内容内容内容内容内容内容容内容内容内容内容
+      </div>
+    </div>
+  </main>
+  <section class="more-news-container max-center">
+    <div class="title-box">
+      <span>更多新闻</span>
+    </div>
+    <ul class="news-list">
+      <li class="news-item">
+        <a href="news_view.html">
+          <div class="img">
+            <img src="/public/news/news-05.jpg">
+          </div>
+          <div class="text">
+            <div class="title">新闻标题 | 标题标题</div>
+            <div class="date">2022-09-20</div>
+          </div>
+        </a>
+      </li>
+      <li class="news-item">
+        <a href="news_view.html">
+          <div class="img">
+            <img src="/public/news/news-05.jpg">
+          </div>
+          <div class="text">
+            <div class="title">新闻标题 | 标题标题</div>
+            <div class="date">2022-09-20</div>
+          </div>
+        </a>
+      </li>
+      <li class="news-item">
+        <a href="news_view.html">
+          <div class="img">
+            <img src="/public/news/news-05.jpg">
+          </div>
+          <div class="text">
+            <div class="title">新闻标题 | 标题标题</div>
+            <div class="date">2022-09-20</div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </section>
+  <!-- 引入公共页尾 -->
+  <%= require("html-loader!../common/footer/index.html") %>
+</body>
+
+</html>

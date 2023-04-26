@@ -1,0 +1,38 @@
+.module {
+  padding: 40px 0;
+}
+.contact-container {
+  &.max-center {
+    margin-bottom: 38px;
+  }
+}
+.address-container {
+  padding-top: 0;
+}
+.qrcode-container {
+  padding: 35px 0;
+  .flex(flex-end,flex-start);
+  .qrcode-list {
+    .flex(flex-end,flex-start);
+    flex-wrap: wrap;
+    .qrcode-item {
+      position: relative;
+      .qrcode {
+        display: none;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 120px;
+        padding: 10px;
+        p {
+          padding: 10px 0;
+        }
+      }
+      &:hover {
+        .qrcode {
+          display: block;
+        }
+      }
+    }
+  }
+}

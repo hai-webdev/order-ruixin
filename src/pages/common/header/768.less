@@ -1,0 +1,43 @@
+body {
+  padding-top: 60px;
+}
+.m-header {
+  height: 60px;
+  z-index: 99;
+  .head-box {
+    padding: 0 10px;
+    .logo {
+      height: 44px;
+      img {
+        height: 100%;
+      }
+    }
+    .right-layout {
+      .flex(flex-start,center);
+      .language-box {
+        width: 80px;
+        position: relative;
+        margin-right: 15px;
+        .language-item {
+          height: 24px;
+        }
+      }
+      .menu {
+        cursor: pointer;
+        span {
+          display: block;
+          width: 32px;
+          height: 4px;
+          margin-bottom: 4px;
+          background-color: @mainColor;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+  .nav-box {
+    top: 60px;
+  }
+}

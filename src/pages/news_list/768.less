@@ -1,0 +1,81 @@
+.main-content {
+  padding: 20px 0;
+  .cate-list {
+    margin-bottom: 20px;
+    .cate-item {
+      font-size: 16px;
+      margin-right: 10px;
+      &::after {
+        height: 3px;
+      }
+      &:hover,
+      &.on {
+        font-size: 20px;
+        &::after {
+          width: 50px;
+        }
+      }
+    }
+  }
+  .news-list {
+    margin-bottom: 30px;
+    .news-item {
+      padding: 20px 0;
+      a {
+        .flex(flex-start,flex-start);
+        flex-wrap: wrap;
+      }
+      .text {
+        width: 100%;
+        padding-left: 0;
+        .title {
+          font-size: 18px;
+          margin-bottom: 6px;
+          .clamp(1);
+        }
+        .desc {
+          font-size: 16px;
+          margin-bottom: 6px;
+          .clamp(3);
+        }
+        .more {
+          font-size: 15px;
+          margin-bottom: 6px;
+        }
+        .date {
+          font-size: 14px;
+        }
+      }
+      .img {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .pagination {
+    .flex();
+    .page-num {
+      .flex();
+      width: 24px;
+      height: 24px;
+      margin: 0 2px 4px;
+      font-size: 13px;
+    }
+    .ellipsis {
+      width: 24px;
+      height: 24px;
+      user-select: none;
+      .flex();
+    }
+    .prev,
+    .next {
+      .flex();
+      user-select: none;
+      font-size: 13px;
+      border-radius: 4px;
+      height: 24px;
+      padding: 0 10px;
+      margin: 0 2px 4px;
+    }
+  }
+}

@@ -1,0 +1,112 @@
+.module {
+  padding: 30px 0;
+}
+.contact-container {
+  &.max-center {
+    margin-top: 50px;
+  }
+  .left-layout {
+    .contact-list {
+      .contact-item {
+        margin-bottom: 40px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        .title {
+          font-size: 18px;
+        }
+        .en-title {
+          font-size: 15px;
+        }
+        .info {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+  .right-layout {
+    padding: 0 40px;
+    .photo {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 5px;
+    }
+    .text {
+      .title {
+        font-size: 18px;
+      }
+      .position {
+        font-size: 13px;
+      }
+      p {
+        font-size: 13px;
+      }
+    }
+  }
+}
+.address-container {
+  .left-layout {
+    width: 45%;
+    .title {
+      font-size: 18px;
+    }
+    .en-title {
+      font-size: 15px;
+    }
+    .address {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .form-box {
+      width: 100%;
+      textarea,
+      input {
+        font-size: 14px;
+        margin-bottom: 8px;
+        padding-left: 10px;
+      }
+      textarea {
+        height: 80px;
+        padding-top: 10px;
+      }
+      input {
+        height: 36px;
+      }
+      .submit {
+        height: 36px;
+        font-size: 14px;
+      }
+    }
+  }
+  .right-layout {
+    width: 55%;
+    padding-left: 20px;
+  }
+}
+.qrcode-container {
+  padding: 35px 0;
+  .flex(flex-end,flex-start);
+  .qrcode-list {
+    .flex(flex-end,flex-start);
+    flex-wrap: wrap;
+    .qrcode-item {
+      position: relative;
+      .qrcode {
+        display: none;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 120px;
+        padding: 10px;
+        p {
+          padding: 10px 0;
+        }
+      }
+      &:hover {
+        .qrcode {
+          display: block;
+        }
+      }
+    }
+  }
+}

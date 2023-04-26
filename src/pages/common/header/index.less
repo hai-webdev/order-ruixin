@@ -1,0 +1,138 @@
+@import "~@/assets/global.less";
+
+body {
+  padding-top: 96px;
+}
+.pc-header {
+  background-color: #fff;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  .head-layout {
+    height: 96px;
+    .flex(space-between);
+    .left-layout {
+      .logo {
+        display: block;
+        height: 62px;
+        img {
+          height: 100%;
+        }
+      }
+    }
+    .right-layout {
+      .flex(flex-start);
+      .nav-list {
+        .flex(flex-start);
+        .nav-item {
+          position: relative;
+          & > a {
+            line-height: 96px;
+            height: 96px;
+            padding: 0 25px;
+            font-size: 18px;
+            .flex();
+            .iconfont {
+              font-size: 0.5em;
+              margin-left: 3px;
+              color: #000;
+            }
+          }
+          .nav-sublist {
+            position: absolute;
+            width: 100%;
+            background-color: #fff;
+            font-size: 16px;
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+            display: none;
+            .nav-subitem {
+              text-align: center;
+              padding: 0 30px;
+              a {
+                height: 48px;
+                line-height: 48px;
+                display: block;
+                position: relative;
+                &::after {
+                  content: "";
+                  position: absolute;
+                  left: 50%;
+                  bottom: 0;
+                  transform: translateX(-50%);
+                  width: 100%;
+                  height: 1px;
+                  background-color: #c0c0c0;
+                }
+              }
+              &:hover {
+                background-color: rgba(210, 0, 9, 0.17);
+              }
+              &:last-child {
+                a {
+                  &::after {
+                    display: none;
+                  }
+                }
+              }
+            }
+          }
+          &:hover {
+            .nav-sublist {
+              display: block;
+            }
+          }
+        }
+      }
+      .language-box {
+        width: 104px;
+        position: relative;
+        margin-left: 33px;
+        .language-item {
+          width: 100%;
+          height: 36px;
+          cursor: pointer;
+          user-select: none;
+          background-color: #fff;
+          border-radius: 3px;
+          .flex();
+          font-size: 18px;
+          img {
+            width: 18px;
+          }
+          span {
+            margin-left: 4px;
+            margin-right: 8px;
+          }
+          .iconfont {
+            font-size: 0.5em;
+            color: #000;
+          }
+        }
+        .language-select-active {
+          border: 1px solid @mainColor;
+          position: relative;
+          z-index: 2;
+        }
+        .language-select {
+          position: absolute;
+          width: 100%;
+          top: 40px;
+          display: none;
+          .language-option {
+            border: 1px solid #25428c;
+          }
+        }
+      }
+    }
+  }
+}
+.m-header {
+  display: none;
+}
+@import "./1440.less" screen and (max-width: 1440px);
+@import "./1200.less" screen and (max-width: 1200px);
+@import "./1080.less" screen and (max-width: 1080px);
+@import "./768.less" screen and (max-width: 768px);
